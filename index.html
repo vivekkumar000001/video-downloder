@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Downloader</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Video Downloader</h1>
+            <p>Paste a direct video URL to download</p>
+        </header>
+
+        <div class="main-content">
+            <div class="form-container">
+                <form id="downloadForm">
+                    <div class="form-group">
+                        <label for="videoUrl">Video URL (must be direct link)</label>
+                        <input type="url" id="videoUrl" name="videoUrl" placeholder="https://example.com/video.mp4" required>
+                        <p class="note">Note: Works with direct video links only (ending with .mp4, .webm, etc.)</p>
+                    </div>
+
+                    <button type="submit" class="btn">Download Video</button>
+                </form>
+            </div>
+
+            <div class="result-container hidden" id="resultContainer">
+                <h2>Download Ready</h2>
+                <p>Your video has been processed successfully.</p>
+                <a href="#" class="btn" id="downloadLink">Download Now</a>
+                <button class="btn secondary" id="newDownload">Download Another</button>
+            </div>
+
+            <div class="loading hidden" id="loading">
+                <div class="spinner"></div>
+                <p>Downloading video...</p>
+            </div>
+        </div>
+
+        <div class="disclaimer">
+            <p><strong>Disclaimer:</strong> This tool only works with publicly accessible videos. Downloading copyrighted content without permission may be illegal.</p>
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
